@@ -1,0 +1,22 @@
+<table class="table">
+    <thead>
+        <tr>
+            <th>Imagen</th>
+            <th>Nombre</th>
+            <th>Tipo</th>
+            <th>Precio</th>
+            <th>Stocks</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let cerveza of cervezas">
+            <td><img [src]="cerveza.imagen" [alt]="cerveza.nombre"></td>
+            <td>{{cerveza.nombre}} </td>
+            <td>{{cerveza.tipo}} </td>
+            <td>{{cerveza.precio}} </td>
+            <td ><span *ngIf="cerveza.stock==0">No hay stock </span></td>
+            
+            <!-- <td *ngIf="0cerveza.stock">{{cerveza.precio}}</td> -->
+        </tr>
+    </tbody>
+</table>
