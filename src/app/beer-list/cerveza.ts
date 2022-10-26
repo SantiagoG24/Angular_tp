@@ -4,4 +4,5 @@ export interface Cerveza{
     precio:number;
     stock:number
     imagen:string;
+    liquidacion:boolean;
 }

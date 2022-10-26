@@ -9,14 +9,14 @@
         </tr>
     </thead>
     <tbody>
-        <tr *ngFor="let cerveza of cervezas">
+        <tr *ngFor="let cerveza of cervezas" [ngClass]="{'liquidacion':cerveza.liquidacion}">
             <td><img [src]="cerveza.imagen" [alt]="cerveza.nombre"></td>
             <td>{{cerveza.nombre}} </td>
             <td>{{cerveza.tipo}} </td>
-            <td>{{cerveza.precio}} </td>
+            <td>{{cerveza.precio | currency}} </td>
             <td ><span *ngIf="cerveza.stock==0">No hay stock </span></td>
-            
             <!-- <td *ngIf="0cerveza.stock">{{cerveza.precio}}</td> -->
         </tr>
     </tbody>
 </table>
+

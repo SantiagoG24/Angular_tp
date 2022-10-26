@@ -9,32 +9,36 @@ import { Cerveza } from './cerveza';
 export class BeerListComponent implements OnInit {
   cervezas: Cerveza[] = [
     {
-      nombre: 'Negra',
+      nombre: 'Black',
       tipo: 'Porter',
       precio: 123,
       stock: 6,
-      imagen: 'asset/img/Cervezanegra.jpge',
+      imagen:'assets/img/Cervezanegra.jpg',
+      liquidacion:false,
     },
     {
-      nombre: 'baiter',
+      nombre: 'Baiter',
       tipo: 'IPA',
       precio: 180,
       stock: 5,
-      imagen: 'asset/img/ipa.jpge',
+      imagen:'assets/img/ipa.png',
+      liquidacion:true,
     },
     {
-      nombre: 'red hot',
-      tipo: 'chilli',
+      nombre: 'Chilli ',
+      tipo: 'Red hot',
       precio: 200,
       stock: 10,
-      imagen: 'asset/img/cervezaroja.jpge',
+      imagen:'assets/img/cervezaroja.jpg',
+      liquidacion:false,
     },
     {
-      nombre: 'yellato',
-      tipo: 'golden retriver ',
+      nombre: 'Yellato',
+      tipo: 'Golden retriever',
       precio: 180,
       stock: 0,
-      imagen: 'asset/img/cervezaruvia.jpge',
+      imagen:'assets/img/cervezarubia.jpg',
+      liquidacion:false,
     }
   ];
   constructor() { }
