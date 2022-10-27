@@ -15,6 +15,7 @@ export class BeerListComponent implements OnInit {
       stock: 6,
       imagen:'assets/img/Cervezanegra.jpg',
       liquidacion:false,
+      cantidad:0,
     },
     {
       nombre: 'Baiter',
@@ -23,6 +24,7 @@ export class BeerListComponent implements OnInit {
       stock: 5,
       imagen:'assets/img/ipa.png',
       liquidacion:true,
+      cantidad:0,
     },
     {
       nombre: 'Chilli ',
@@ -31,6 +33,7 @@ export class BeerListComponent implements OnInit {
       stock: 10,
       imagen:'assets/img/cervezaroja.jpg',
       liquidacion:false,
+      cantidad:0,
     },
     {
       nombre: 'Yellato',
@@ -39,11 +42,23 @@ export class BeerListComponent implements OnInit {
       stock: 0,
       imagen:'assets/img/cervezarubia.jpg',
       liquidacion:false,
+      cantidad:0,
     }
   ];
   constructor() { }
 
   ngOnInit(): void {
   }
-
+  DecrementarContador(cerveza:Cerveza):void{
+    if(cerveza.cantidad>0)
+    cerveza.cantidad--; 
+  }
+  IncrementarContador(cerveza:Cerveza):void{
+    if (cerveza.cantidad < cerveza.stock)
+    cerveza.cantidad++; 
+  }
+  // cambioCantidad(event,cerveza:Cerveza):void{
+  //   event.prevent
+  //(keyup)="cambioCantidad($event,cerveza)" html
+  // }
 }

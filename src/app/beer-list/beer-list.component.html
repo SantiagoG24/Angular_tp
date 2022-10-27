@@ -1,4 +1,4 @@
-<table class="table">
+<table class="table text-center">
     <thead>
         <tr>
             <th>Imagen</th>
@@ -6,6 +6,7 @@
             <th>Tipo</th>
             <th>Precio</th>
             <th>Stocks</th>
+            <th>Compras</th>
         </tr>
     </thead>
     <tbody>
@@ -15,7 +16,11 @@
             <td>{{cerveza.tipo}} </td>
             <td>{{cerveza.precio | currency}} </td>
             <td ><span *ngIf="cerveza.stock==0">No hay stock </span></td>
-            <!-- <td *ngIf="0cerveza.stock">{{cerveza.precio}}</td> -->
+            <td>
+                <button class="btn btn-primary btn-sm" (click)="DecrementarContador(cerveza)">-</button>
+                <input type="text" [(ngModel)]="cerveza.cantidad">
+                <button  class="btn btn-primary btn-sm"(click)="IncrementarContador(cerveza)">+</button>
+                </td>
         </tr>
     </tbody>
 </table>
