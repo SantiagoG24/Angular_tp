@@ -16,12 +16,14 @@
             <td>{{cerveza.tipo}} </td>
             <td>{{cerveza.precio | currency}} </td>
             <td ><span *ngIf="cerveza.stock==0">No hay stock </span></td>
-            <td>
-                <button class="btn btn-primary btn-sm" (click)="DecrementarContador(cerveza)">-</button>
-                <input type="text" [(ngModel)]="cerveza.cantidad">
-                <button  class="btn btn-primary btn-sm"(click)="IncrementarContador(cerveza)">+</button>
-                </td>
+            <td *ngIf="cerveza.stock>0">
+                <app-input-integer [(cantidad)]="cerveza.cantidad" [max]="cerveza.stock" *ngIf="cerveza.stock" ></app-input-integer>
+                {{cerveza.cantidad}}
+            </td>
         </tr>
     </tbody>
 </table>
+
+
+<!-- (maxAlcanzado)="maxAlcanzado($event)" -->
 

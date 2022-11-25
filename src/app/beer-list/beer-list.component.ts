@@ -57,6 +57,10 @@ export class BeerListComponent implements OnInit {
     if (cerveza.cantidad < cerveza.stock)
     cerveza.cantidad++; 
   }
+  maxAlcanzado(m:string):void{
+    alert(m);
+
+  }
   // cambioCantidad(event,cerveza:Cerveza):void{
   //   event.prevent
   //(keyup)="cambioCantidad($event,cerveza)" html

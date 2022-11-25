@@ -8,6 +8,7 @@ import { FormsModule } from '@angular/forms';
 import { ChamberContactosComponent } from './chamber-contactos/chamber-contactos.component';
 import { ChamberCervezasComponent } from './chamber-cervezas/chamber-cervezas.component';
 import { ChamberCarroComprasComponent } from './chamber-carro-compras/chamber-carro-compras.component';
+import { InputIntegerComponent } from './input-integer/input-integer.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { ChamberCarroComprasComponent } from './chamber-carro-compras/chamber-ca
     BeerListComponent,
     ChamberContactosComponent,
     ChamberCervezasComponent,
-    ChamberCarroComprasComponent
+    ChamberCarroComprasComponent,
+    InputIntegerComponent
   ],
   imports: [
     BrowserModule,
