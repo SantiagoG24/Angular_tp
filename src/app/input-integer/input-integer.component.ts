@@ -37,8 +37,8 @@ export class InputIntegerComponent implements OnInit {
     }else
     this.maxChange.emit("se alcanzo un maximo");
   }
-  // cambiarCantidad(event):void{ 
-  //   console.log(event.key);
-  //   this.cantidadChange.emit(this.cantidad);
-  // }
+  cambioCantidad(event: { target: any; }):void{ 
+    console.log(event.target);
+    this.cantidadChange.emit(this.cantidad);
+  }
 }

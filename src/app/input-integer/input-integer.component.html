@@ -1,5 +1,6 @@
 <div class="input-group">
     <button class="btn btn-primary btn-sm" (click)="DecrementarContador()">-</button>
-        <input type="text" class="text-center" [(ngModel)]="cantidad">
+        <input type="text" class="text-center" [(ngModel)]="cantidad"
+        (keyup)="cambioCantidad($event)">
     <button  class="btn btn-primary btn-sm"(click)="IncrementarContador()">+</button>
 </div>
