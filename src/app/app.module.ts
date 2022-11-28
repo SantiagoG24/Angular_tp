@@ -5,9 +5,9 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BeerListComponent } from './beer-list/beer-list.component';
 import { FormsModule } from '@angular/forms';
-import { ChamberContactosComponent } from './chamber-contactos/chamber-contactos.component';
-import { ChamberCervezasComponent } from './chamber-cervezas/chamber-cervezas.component';
-import { ChamberCarroComprasComponent } from './chamber-carro-compras/chamber-carro-compras.component';
+import { ChamberContactosComponent } from './contactos/chamber-contactos.component';
+import { ChamberCervezasComponent } from './cervezas/chamber-cervezas.component';
+import { ChamberCarroComprasComponent } from './carro-compras/chamber-carro-compras.component';
 import { InputIntegerComponent } from './input-integer/input-integer.component';
 
 @NgModule({

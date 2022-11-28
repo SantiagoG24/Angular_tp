@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { ChamberCervezasComponent } from './chamber-cervezas/chamber-cervezas.component';
-import { ChamberContactosComponent } from './chamber-contactos/chamber-contactos.component';
+import { ChamberCervezasComponent } from './cervezas/chamber-cervezas.component';
+import { ChamberContactosComponent } from './contactos/chamber-contactos.component';
 
 const routes: Routes = [
   {

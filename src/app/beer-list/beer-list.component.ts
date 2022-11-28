@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CarritoCervezaService } from '../carrito-cerveza.service';
 import { Cerveza } from './cerveza';
 
 @Component({
@@ -45,20 +46,30 @@ export class BeerListComponent implements OnInit {
       cantidad:0,
     }
   ];
-  constructor() { }
+  
+  constructor(private carrito:CarritoCervezaService) {
+    
+  }
 
   ngOnInit(): void {
   }
+
   DecrementarContador(cerveza:Cerveza):void{
     if(cerveza.cantidad>0)
     cerveza.cantidad--; 
   }
+
   IncrementarContador(cerveza:Cerveza):void{
     if (cerveza.cantidad < cerveza.stock)
     cerveza.cantidad++; 
   }
+
   maxAlcanzado(m:string):void{
     alert(m);
+  }
+
+  agregaACarrito(cerveza:Cerveza):void{
+    this.carrito.agregaACarrito(cerveza)
 
   }
   // cambioCantidad(event,cerveza:Cerveza):void{
