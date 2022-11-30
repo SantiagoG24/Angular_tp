@@ -1,1 +1,6 @@
 <div class="col-4">Carrito de compras</div>
+<ul>
+    <li *ngFor="let cerveza of carritoCompra">
+        {{cerveza.nombre}}: Cantidad {{cerveza.cantidad}}
+    </li>
+</ul>

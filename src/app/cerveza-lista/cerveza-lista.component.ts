@@ -4,10 +4,10 @@ import { Cerveza } from './cerveza';
 
 @Component({
   selector: 'app-beer-list',
-  templateUrl: './beer-list.component.html',
-  styleUrls: ['./beer-list.component.scss']
+  templateUrl: './cerveza-lista.component.html',
+  styleUrls: ['./cerveza-lista.component.scss']
 })
-export class BeerListComponent implements OnInit {
+export class CervezaListaComponent implements OnInit {
   cervezas: Cerveza[] = [
     {
       nombre: 'Black',
@@ -50,6 +50,12 @@ export class BeerListComponent implements OnInit {
   constructor(private carrito:CarritoCervezaService) {
     
   }
+  agregaACarrito(cerveza:Cerveza):void{
+    this.carrito.agregaACarrito(cerveza)
+    cerveza.stock-=cerveza.cantidad
+    cerveza.cantidad=0
+
+  }
 
   ngOnInit(): void {
   }
@@ -68,10 +74,7 @@ export class BeerListComponent implements OnInit {
     alert(m);
   }
 
-  agregaACarrito(cerveza:Cerveza):void{
-    this.carrito.agregaACarrito(cerveza)
-
-  }
+  
   // cambioCantidad(event,cerveza:Cerveza):void{
   //   event.prevent
   //(keyup)="cambioCantidad($event,cerveza)" html
