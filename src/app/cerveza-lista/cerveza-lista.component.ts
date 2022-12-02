@@ -55,7 +55,7 @@ export class CervezaListaComponent implements OnInit {
 
 
 
-{
+//{
 //   "tipo": 'Porter',
 //  "precio": 123,
 //   "stock": 6,
