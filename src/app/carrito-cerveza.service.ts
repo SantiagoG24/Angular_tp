@@ -8,14 +8,15 @@ import { Cerveza } from './cerveza-lista/cerveza';
 
 export class CarritoCervezaService {
   private _carritoCompra : Cerveza[] = [];
-  carritoCompra :BehaviorSubject <Cerveza[]>=new BehaviorSubject(this._carritoCompra);
+  carritoCompra :BehaviorSubject <Cerveza[]>=new BehaviorSubject<Cerveza[]>([]);
 
   constructor() { }
 
   agregaACarrito(cerveza: Cerveza) {
-    let item :Cerveza=this._carritoCompra.find((v1)=>v1.nombre=cerveza.nombre)!;
+    let item :Cerveza=this._carritoCompra.find((v1)=>v1.nombre==cerveza.nombre)!;
     if(!item){
       this._carritoCompra.push({...cerveza});
+
     }else{
       item.cantidad += cerveza.cantidad; 
     }

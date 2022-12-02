@@ -9,7 +9,7 @@ import { ChamberContactosComponent } from './contactos/chamber-contactos.compone
 import { ChamberCervezasComponent } from './cervezas/chamber-cervezas.component';
 import { ChamberCarroComprasComponent } from './carro-compras/chamber-carro-compras.component';
 import { InputIntegerComponent } from './input-integer/input-integer.component';
-
+import {HttpClientModule}from '@angular/common/http'
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,7 +22,8 @@ import { InputIntegerComponent } from './input-integer/input-integer.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

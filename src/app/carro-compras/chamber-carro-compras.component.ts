@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { observable } from 'rxjs';
+import { Observable, observable } from 'rxjs';
 import { CarritoCervezaService } from '../carrito-cerveza.service';
 import { Cerveza } from '../cerveza-lista/cerveza';
 
@@ -9,10 +9,10 @@ import { Cerveza } from '../cerveza-lista/cerveza';
   styleUrls: ['./chamber-carro-compras.component.scss']
 })
 export class ChamberCarroComprasComponent implements OnInit {
-  carritoCompra !: Cerveza[];
+  carritoCompra$ !: Observable <Cerveza[]>;
 
   constructor(private carrito:CarritoCervezaService) {
-    carrito.carritoCompra.subscribe((cerveza)=>this.carritoCompra=cerveza);
+    this.carritoCompra$ = carrito.carritoCompra.asObservable();
   }
 
   ngOnInit(): void {
