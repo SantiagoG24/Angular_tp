@@ -19,7 +19,6 @@
             <td ><span *ngIf="cerveza.stock==0">No hay stock </span><span *ngIf="cerveza.stock!=0">{{cerveza.stock}} </span></td>
             <td *ngIf="cerveza.stock>0">
                 <app-input-integer [(cantidad)]="cerveza.cantidad" [max]="cerveza.stock" *ngIf="cerveza.stock" ></app-input-integer>
-                {{cerveza.cantidad}}
                 <button class="btn btn-primary" (click)="agregaACarrito(cerveza)">Comprar</button>
             </td>
             <!-- <td><button class="btn btn-primary" (click)="agregaACarrito(cerveza)">Comprar</button></td> -->

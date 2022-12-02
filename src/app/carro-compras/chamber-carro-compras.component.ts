@@ -17,8 +17,4 @@ export class ChamberCarroComprasComponent implements OnInit {
 
   ngOnInit(): void {
   }
-  // agregaACarrito(cerveza:Cerveza):void{
-  //   this.carrito.agregaACarrito(cerveza)
-
-  // }
 }
